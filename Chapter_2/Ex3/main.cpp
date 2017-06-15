@@ -1,24 +1,24 @@
 #include <iostream>
+
 void printEntliczek();
+
 void printStoliczek();
+
 //Program printing a poem
-int main()
-{
+int main() {
     printEntliczek();
     printEntliczek();
     printStoliczek();
     printStoliczek();
 }
 
-void printEntliczek()
-{
+void printEntliczek() {
     using std::cout;
 
     cout << "Entliczek pentliczek\n";
 }
 
-void printStoliczek()
-{
+void printStoliczek() {
     using std::cout;
 
     cout << "Czerwony stoliczek\n";

@@ -2,8 +2,7 @@
 
 int yearsToMonths(int);
 
-int main()
-{
+int main() {
     using namespace std;
 
     cout << "Input your age: ";
@@ -14,7 +13,6 @@ int main()
     return 0;
 }
 
-int yearsToMonths(int years)
-{
+int yearsToMonths(int years) {
     return years * 12;
 }

@@ -2,8 +2,7 @@
 
 void printTime(int, int);
 
-int main()
-{
+int main() {
     using namespace std;
     cout << "Input hours: ";
     int hours;
@@ -17,8 +16,7 @@ int main()
     return 0;
 }
 
-void printTime(int hours, int minutes)
-{
+void printTime(int hours, int minutes) {
     using std::cout;
     using std::endl;
     cout << "Time: " << hours << ":" << minutes << endl;

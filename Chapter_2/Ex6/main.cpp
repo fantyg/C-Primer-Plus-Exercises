@@ -1,22 +1,20 @@
 #include <iostream>
 
-double lightYearsToAstroUnits(double);
+double lightYearsToAstronomyUnits(double);
 
-int main()
-{
+int main() {
     using namespace std;
 
-    cout << "Input number in ligth years: ";
+    cout << "Input number in light years: ";
     double lightYears;
 
     cin >> lightYears;
     cout << lightYears << " light years is "
-         << lightYearsToAstroUnits(lightYears)
-         << " astronomical units." << endl;
+         << lightYearsToAstronomyUnits(lightYears)
+         << " astronomy units." << endl;
     return 0;
 }
 
-double lightYearsToAstroUnits(double lightYears)
-{
+double lightYearsToAstronomyUnits(double lightYears) {
     return lightYears * 63240;
 }

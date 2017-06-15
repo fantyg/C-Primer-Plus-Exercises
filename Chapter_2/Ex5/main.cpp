@@ -2,8 +2,7 @@
 
 double celsiusToFarenhait(double);
 
-int main()
-{
+int main() {
     using namespace std;
 
     cout << "Input temperature in Cesius degrees: ";
@@ -14,7 +13,6 @@ int main()
     return 0;
 }
 
-double celsiusToFarenhait(double celsius)
-{
+double celsiusToFarenhait(double celsius) {
     return 1.8 * celsius + 32.;
 }

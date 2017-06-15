@@ -12,7 +12,7 @@ int main() {
             {"Snikers",      1.1f, 320},
             {"Mars",         .6f,  300},
             {"Kinder Bueno", .5f,  260}};
-    
+
     std::cout << "Candy bar brand: "
               << candyBars[0].brandName
               << ", weight: "

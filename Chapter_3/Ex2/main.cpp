@@ -1,12 +1,14 @@
 #include <iostream>
 
 double fiToInch(int, int);
+
 double inchToMeters(double);
+
 double poundsToKg(double);
+
 double countBmi(double, double);
 
-int main()
-{
+int main() {
     using namespace std;
     int foots, inches;
     double pounds;
@@ -25,25 +27,21 @@ int main()
     return 0;
 }
 
-double fiToInch(int foots, int inches)
-{
+double fiToInch(int foots, int inches) {
     const short oneFoot = 12;
     return static_cast<double>(oneFoot) * foots + inches;
 }
 
-double inchToMeters(double inches)
-{
+double inchToMeters(double inches) {
     const double mlt = .0254;
     return inches * mlt;
 }
 
-double poundsToKg(double pounds)
-{
+double poundsToKg(double pounds) {
     const double mlt = 2.2;
     return pounds / mlt;
 }
 
-double countBmi(double meters, double kg)
-{
+double countBmi(double meters, double kg) {
     return kg / (meters * meters);
 }

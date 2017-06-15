@@ -6,26 +6,28 @@ double minToDegree(int);
 int main()
 {
     using namespace std;
-    cout << "Input geogephical length in degrees, minutes and secunds.\n";
-    int degrees, minutes, secundes;
+    cout << "Input geographical length in degrees, minutes and seconds.\n";
+    int degrees, minutes, seconds;
 
     cout << "Input degrees: ";
     cin >> degrees;
     cout << "Input minutes: ";
     cin >> minutes;
-    cout << "Input secundes: ";
-    cin >> secundes;
-    cout << "It\'s " << degrees + sToDegree(secundes) + minToDegree(minutes);
+    cout << "Input seconds: ";
+    cin >> seconds;
+    cout << "It\'s " << degrees + sToDegree(seconds) + minToDegree(minutes);
     cout << " degrees.\n";
     return 0;
 }
 
-double sToDegree(int secundes)
+double sToDegree(int seconds)
 {
-    return secundes / 3600.0;
+    const double SECONDS_IN_DEGREE = 3600.0;
+    return seconds / SECONDS_IN_DEGREE;
 }
 
 double minToDegree(int minutes)
 {
-    return minutes / 60.0;
+    const double MINUTES_IN_DEGREE = 3600.0;
+    return minutes / MINUTES_IN_DEGREE;
 }

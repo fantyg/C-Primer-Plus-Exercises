@@ -2,8 +2,7 @@
 
 double countPercent(long long, long long);
 
-int main()
-{
+int main() {
     using namespace std;
     long long worldPopulation, polandPopulation;
 
@@ -15,7 +14,6 @@ int main()
     cout << "% of world.\n";
 }
 
-double countPercent(long long small, long long big)
-{
+double countPercent(long long small, long long big) {
     return double(small) / double(big) * 100L;
 }

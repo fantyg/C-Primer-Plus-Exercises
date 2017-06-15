@@ -2,20 +2,18 @@
 
 double euToUs(double);
 
-int main()
-{
+int main() {
     using namespace std;
-    double euConsumpcion;
+    double euConsumption;
 
-    cout << "Input consumpcion in litres on 100km: ";
-    cin >> euConsumpcion;
-    cout << "Consumption in miles on galon is: " << euToUs(euConsumpcion) << endl;
+    cout << "Input consumption in litres on 100km: ";
+    cin >> euConsumption;
+    cout << "Consumption in miles on gallon is: " << euToUs(euConsumption) << endl;
     return 0;
 }
 
-double euToUs(double eu)
-{
-    const double Miles{62.14}, Galon{1 / 3.875};
+double euToUs(double eu) {
+    const double MILES{62.14}, GALLON{1 / 3.875};
 
-    return (1 / eu) * (Miles / Galon);
+    return (1 / eu) * (MILES / GALLON);
 }

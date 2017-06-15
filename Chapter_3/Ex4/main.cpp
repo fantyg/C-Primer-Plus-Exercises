@@ -1,57 +1,55 @@
 #include <iostream>
 
-long daysFromSecondes(long);
-short hoursFromSecondes(long, long);
-short minutesFromSecondes(long, long, short);
-short restSecondes(long, long, short, short);
+long daysFromSeconds(long seconds);
 
-int main()
-{
+short hoursFromSeconds(long seconds, long days);
+
+short minutesFromSeconds(long seconds, long days, short hours);
+
+short restSeconds(long seconds, long days, short hours, short minutes);
+
+int main() {
     using namespace std;
-    long secondes;
+    long seconds;
 
-    cout << "Input time in secondes: ";
-    cin >> secondes;
+    cout << "Input time in seconds: ";
+    cin >> seconds;
     long days;
     short hours, minutes, restSec;
 
-    days = daysFromSecondes(secondes);
-    hours = hoursFromSecondes(secondes, days);
-    minutes = minutesFromSecondes(secondes, days, hours);
-    restSec = restSecondes(secondes, days, hours, minutes);
+    days = daysFromSeconds(seconds);
+    hours = hoursFromSeconds(seconds, days);
+    minutes = minutesFromSeconds(seconds, days, hours);
+    restSec = restSeconds(seconds, days, hours, minutes);
 
     cout << "It\'s: " << days << " day(s) " << hours << " hour(s) ";
-    cout << minutes << " minute(s) and " << restSec << " secondes.\n";
+    cout << minutes << " minute(s) and " << restSec << " seconds.\n";
     return 0;
 }
 
-long daysFromSecondes(long secondes)
-{
-    const double SecondesInDay{60. * 60. * 24.};
+long daysFromSeconds(long seconds) {
+    const double SECONDS_IN_DAY{60. * 60. * 24.};
 
-    return long(secondes / SecondesInDay);
+    return long(seconds / SECONDS_IN_DAY);
 }
 
-short hoursFromSecondes(long secondes, long days)
-{
-    const double SecondesInHour{60. * 60.};
-    const short HoursInDay{24};
+short hoursFromSeconds(long seconds, long days) {
+    const double SECONDS_IN_HOUR{60. * 60.};
+    const short HOURS_IN_DAY{24};
 
-    return short(long(secondes / SecondesInHour) - days * HoursInDay);
+    return short(long(seconds / SECONDS_IN_HOUR) - days * HOURS_IN_DAY);
 }
 
-short minutesFromSecondes(long secondes, long days, short hours)
-{
-    const double SecondesInMinute{60.};
-    const short MinutesInHour{60}, MinutesInDay{60 * 24};
+short minutesFromSeconds(long seconds, long days, short hours) {
+    const double SECONDS_IN_MINUTE{60.};
+    const short MINUTES_IN_HOUR{60}, MINUTES_IN_DAY{60 * 24};
 
-    return short(long(secondes / SecondesInMinute) - days * MinutesInDay - hours * MinutesInHour);
+    return short(long(seconds / SECONDS_IN_MINUTE) - days * MINUTES_IN_DAY - hours * MINUTES_IN_HOUR);
 }
 
-short restSecondes(long secondes, long days, short hours, short minutes)
-{
-    const short SecondesInMinute{60}, SecondesInHour{60 * 60};
-    const int SecondesInDay{60 * 60 * 24};
+short restSeconds(long seconds, long days, short hours, short minutes) {
+    const short SECONDS_IN_MINUTE{60}, SECONDS_IN_HOUR{60 * 60};
+    const int SECONDS_IN_DAY{60 * 60 * 24};
 
-    return secondes - days * SecondesInDay - hours * SecondesInHour - minutes * SecondesInMinute;
+    return short(seconds - days * SECONDS_IN_DAY - hours * SECONDS_IN_HOUR - minutes * SECONDS_IN_MINUTE);
 }

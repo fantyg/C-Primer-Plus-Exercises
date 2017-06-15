@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
 
-int main()
-{
+int main() {
     std::string name, l_name;
     int note, age;
 

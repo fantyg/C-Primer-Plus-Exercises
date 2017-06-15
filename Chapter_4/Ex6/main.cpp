@@ -9,9 +9,9 @@ struct CandyBar {
 int main() {
     const size_t CANDY_BARS_SIZE = 3;
     CandyBar candyBars[CANDY_BARS_SIZE]{
-            {"Snikers", 1.1f, 320},
-            {"Mars", .6f, 300},
-            {"Kinder Bueno", .5f, 260}};
+            {"Snikers",      1.1f, 320},
+            {"Mars",         .6f,  300},
+            {"Kinder Bueno", .5f,  260}};
     
     std::cout << "Candy bar brand: "
               << candyBars[0].brandName

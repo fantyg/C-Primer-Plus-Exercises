@@ -19,7 +19,7 @@ int main() {
 
     std::ifstream file;
     file.open(fileName);
-    if(!file.is_open()) {
+    if (!file.is_open()) {
         std::cout << "There is no file " << fileName << "." << std::endl;
         exit(EXIT_FAILURE);
     }
@@ -36,18 +36,30 @@ int main() {
     }
     file.close();
 
+    bool empty = true;
     std::cout << "Our Great Donators: " << std::endl;
     for (int i = 0; i < donatorCount; ++i) {
         if (donators[i].donate >= greatnessLimit) {
             std::cout << "\t" << donators[i].lastName << std::endl;
+            empty = false;
         }
     }
 
+    if (empty) {
+        std::cout << "\tnone" << std::endl;
+    }
+
+    empty = true;
     std::cout << "Our Donators: " << std::endl;
     for (int i = 0; i < donatorCount; ++i) {
         if (donators[i].donate < greatnessLimit) {
             std::cout << "\t" << donators[i].lastName << std::endl;
+            empty = false;
         }
+    }
+
+    if (empty) {
+        std::cout << "\tnone" << std::endl;
     }
     return 0;
 }

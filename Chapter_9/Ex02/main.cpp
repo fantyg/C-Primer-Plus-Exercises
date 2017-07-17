@@ -4,7 +4,6 @@ void strcount(const std::string &str);
 
 int main() {
     std::string input;
-    char next;
 
     std::cout << "Input row:\n";
     getline(std::cin, input);

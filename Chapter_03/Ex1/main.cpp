@@ -17,6 +17,7 @@ int main() {
 
 float cmToFoot(int cm) {
     const float oneFoot{30.48f};
+    
     return cm / oneFoot;
 }
 

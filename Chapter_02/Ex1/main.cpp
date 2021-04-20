@@ -1,6 +1,6 @@
 #include <iostream>
 
-///Printing first, last name and address of author.
+//Printing first, last name and address of author.
 int main() {
     using std::cout;
     using std::endl;
